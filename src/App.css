@@ -1,38 +1,421 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  /* height: 3vmax; */
+}
+
+.navbar > .logo > a {
+  font: 500 1.8vmax "Robato";
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: aliceblue;
+}
+
+.navbar > .logo > a > span {
+  color: blueviolet;
+}
+
+.navbar > .menu {
+  display: flex;
+}
+
+.navbar > .menu > li {
+  list-style-type: none;
+  padding: 0.8vmax;
+  font: 500 1.4vmax "Robato";
+}
+
+.navbar > .menu > li > a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: aliceblue;
+}
+
+.navbar > .menu > li > a:hover {
+  color: crimson;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f0c29;
+  height: 20vmax;
+  justify-content: center;
+}
+
+.home > .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home > .max-width > .home-content > .text-1 {
+  font: 500 2vmax "Roboto";
+  color: #fff;
+}
+.home > .max-width > .home-content > .text-2 {
+  font: 500 2vmax "Roboto";
+  color: #fff;
+}
+.home > .max-width > .home-content > .text-3 {
+  font: 500 2vmax "Roboto";
+  color: #fff;
+}
+.home > .max-width > .home-content > .text-4 {
+  font: 500 2vmax "Roboto";
+  color: #fff;
+}
+
+.home > .max-width > .icons {
+  margin: 0.9vmax;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.home > .max-width > .icons > .logosicons-1 > Button {
+  background-color: blue;
+  margin: 2vmax 2vmax;
+  padding: 0.5vmax;
+}
+.home > .max-width > .icons > .logosicons-2 > Button {
+  background-color: rgb(215, 11, 89);
+  margin: 2vmax 2vmax;
+  padding: 0.5vmax;
+}
+
+.about-box {
+  box-sizing: border-box;
+  display: block;
+  background: rgb(4, 1, 67);
+  background: linear-gradient(
+    90deg,
+    rgba(4, 1, 67, 1) 0%,
+    rgba(9, 17, 121, 1) 44%,
+    rgba(192, 0, 255, 0.9781046207545518) 73%
+  );
+  color: #fff;
+}
+
+.about-box > .header-text {
+  text-align: center;
+}
+.about-box > .header-text > h1 {
+  font: 600 3vmax "Roboto";
+}
+.about-box > .about {
+  display: flex;
+  max-width: 100%;
+}
+.about-box > .about > .img-box-left {
+  padding: 2vmax;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.about-box > .about > .img-box-left > img {
+  width: 60%;
+  display: block;
+  padding: 1vmax;
+}
+
+.about-box > .about > .text-box-right {
+  padding: 2vmax;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.about-box > .about > .text-box-right > p {
+  padding: 3vmax;
+  font: 400 1.5vmax "Roboto";
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Skill */
+
+.skill-box {
+  text-align: center;
+  background-color: black;
+  display: block;
+}
+
+.skill-box > .h1 {
+  font: 800 2vmax "Roboto";
+}
+
+.skill-box > .h5 {
+  font: 800 2vmax "Roboto";
+}
+
+.skill-box > .skill_card {
+  display: flex;
+  margin: 0;
+}
+.skill-box > .skill_card > .card :hover {
+ 
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+transform: scale(1.1);
+}
+
+.skill-box > .skill_card > .card {
+  padding: 20px;
+  margin: 1vmax 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(22, 27, 190, 0.136);
+  width: 130%;
+  height: 130%;
+  object-fit: cover;
+}
+
+/* Certificate */
+
+.Main_Certificate {
+  display: block;
+  background: rgb(4, 1, 67);
+  background: linear-gradient(
+    90deg,
+    rgba(4, 1, 67, 1) 0%,
+    rgba(9, 17, 121, 1) 44%,
+    rgba(192, 0, 255, 0.9781046207545518) 73%
+  );
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main_Certificate > .H1-Certificate {
+  font: 800 2vmax "Roboto";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Main_Certificate > .Certificate_layout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 100%;
+  overflow: auto;
+  padding: 2vmax;
+}
+.Main_Certificate > .Certificate_layout > div {
+  display: block;
+  width:33%;
+  padding: 0.8vmax;
+}
+.Main_Certificate > .Certificate_layout > div > img {
+  background-color: rgba(22, 27, 190, 0.136);
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 5%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Skill */
+
+.Projects {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  background: rgb(0, 6, 36);
+  color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Projects > .ProjectSub {
+  display: flex;
+  flex-direction: row;
+  padding: 1vmax;
+}
+.Projects > .ProjectSub > div {
+  margin: 1.5vmax;
+  width: 20%;
+}
+.Projects > .ProjectSub > div > img {
+  background-color: rgba(22, 27, 190, 0.136);
+  padding: 20px;
+  border-radius: 10px;
+}
+.Projects > .ProjectSub > div > h5 {
+  font: 400 1.3vmax "Roboto";
+}
+
+
+/* Contact */
+
+.Contact{
+  width: auto;
+  background-color: crimson;
+  display: flex;
+  padding: 1vmax;
+  justify-content: center;
+
+}
+
+.Contact > div {
+ padding: 1vmax;
+color: #fff;
+}
+.Contact > div >h2{
+font: 500 2vmax  "Roboto";
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar > .logo > a {
+    font: 400 1.5vmax "Robato";
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: aliceblue;
+  }
+
+  .navbar > .logo > a > span {
+    color: blueviolet;
+  }
+
+  .navbar > .menu {
+    display: flex;
+  }
+
+  .navbar > .menu > li {
+    list-style-type: none;
+    padding: 0.8vmax;
+    font: 400 1.2vmax "Robato";
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0c29;
+    height: 20vmax;
+    justify-content: center;
+  }
+
+  .home > .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about-box > .about {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-box > .about > .img-box-left {
+    padding: 2vmax;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .about-box > .about > .img-box-left > img {
+    width: 60%;
+    display: block;
+    padding: 1vmax;
+  }
+
+  .about-box > .about > .text-box-right {
+    padding: 2vmax;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .about-box > .about > .text-box-right > p {
+    padding: 3vmax;
+    font: 400 2vmax "Roboto";
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* skill */
+  .skill-box > .skill_card {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .skill-box > .skill_card > .card {
+    padding: 2px;
+    margin: 1vmax 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(22, 27, 190, 0.136);
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+
+  }
+
+  /* project */
+
+  .Projects {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    background: rgb(0, 6, 36);
+    color: aliceblue;
+  }
+
+  .Projects > .ProjectSub {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5vmax;
+    flex-wrap: wrap;
+
+  }
+  .Projects > .ProjectSub > div {
+    margin: 1.4vmax;
+    width: 40%;
+  }
+  .Projects > .ProjectSub > div > img {
+    background-color: rgba(22, 27, 190, 0.136);
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .Projects > .ProjectSub > div > h5 {
+    font: 400 1.3vmax "Roboto";
+  }
+  /* Certificate */
+  .Main_Certificate {
+    display: block;
+    background: rgb(4, 1, 67);
+    background: linear-gradient(
+      90deg,
+      rgba(4, 1, 67, 1) 0%,
+      rgba(9, 17, 121, 1) 44%,
+      rgba(192, 0, 255, 0.9781046207545518) 73%
+    );
+    color: #fff;
+    text-align: center;
+  }
+
+  .Main_Certificate > .Certificate_layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow: auto;
+  }
+  .Main_Certificate > .Certificate_layout > div {
+    display: block;
+    width: 40%;
+    padding: 1vmax;
+  }
+  .Main_Certificate > .Certificate_layout > div > img {
+    background-color: rgba(22, 27, 190, 0.136);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 5%;
   }
 }
